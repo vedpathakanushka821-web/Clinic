@@ -165,6 +165,13 @@ h6 {
   font-style: normal;
   color: var(--contrast-color);
 }
+.header + main #user-bar {
+  margin-top: 0 !important;
+}
+
+#user-bar {
+  border-top: none !important;
+}
 
 .header .topbar .contact-info i a,
 .header .topbar .contact-info i span {
@@ -1146,6 +1153,9 @@ section,
   margin-bottom: 2rem;
 }
 
+ main {
+  margin-top: 170px !important;
+}
 .hero .hero-content .hero-actions .btn {
   padding: 1rem 2rem;
   font-weight: 600;

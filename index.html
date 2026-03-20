@@ -29,14 +29,136 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+ <style>
+    :root { 
+      --maroon: #8b2c2c; 
+      --soft-rose: #fffafa; 
+      --dark-blue: #1a2a4e; 
+      --whatsapp-green: #25d366;
+    }
+    
+    body { 
+      font-family: 'Montserrat', sans-serif; 
+      background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);
+      background-attachment: fixed;
+      color: #333;
+    }
 
-  <!-- =======================================================
-  * Template Name: Clinic
-  * Template URL: https://bootstrapmade.com/clinic-bootstrap-template/
-  * Updated: Jul 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    /* FIX: Overlap Correction - Ensuring content starts below the fixed header */
+    main { margin-top: 140px; padding-bottom: 100px; }
+
+    /* Header Styling */
+    .header { background: #ffffff !important; box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1); padding: 15px 0; z-index: 999; }
+    .header .sitename { color: var(--maroon) !important; font-weight: 800; font-size: 30px; text-decoration: none; }
+    
+    .navmenu ul li a {
+      color: #333 !important;
+      font-weight: 700 !important;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    .navmenu ul li a.active { color: var(--maroon) !important; border-bottom: 2px solid var(--maroon); }
+
+    /* BIG HEADING STYLING */
+    .main-heading {
+      font-size: 56px;
+      font-weight: 800;
+      color: var(--dark-blue);
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    /* Appointment Card */
+    .booking-card {
+      background: #ffffff;
+      border-radius: 45px;
+      padding: 50px;
+      box-shadow: 0 30px 70px rgba(139, 44, 44, 0.1);
+      border-top: 12px solid var(--maroon);
+    }
+
+    .form-label { font-weight: 700; color: var(--dark-blue); margin-bottom: 12px; font-size: 14px; }
+    
+    .form-control, .form-select {
+      border-radius: 18px;
+      padding: 15px 25px;
+      border: 1px solid #f0f0f0;
+      background-color: #fdfafa;
+      font-size: 15px;
+    }
+
+    /* HIGHLIGHTED SUBMIT BUTTON */
+    .btn-highlight {
+      background: linear-gradient(135deg, #8b2c2c 0%, #cc3333 50%, #8b2c2c 100%);
+      color: #ffffff !important;
+      border-radius: 50px;
+      padding: 20px 45px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border: 2px solid rgba(255,255,255,0.2);
+      width: 100%;
+      margin-top: 25px;
+      transition: all 0.4s ease;
+      box-shadow: 0 10px 25px rgba(139, 44, 44, 0.4);
+      cursor: pointer;
+    }
+
+    .btn-highlight:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 15px 35px rgba(139, 44, 44, 0.6);
+      filter: brightness(1.1);
+    }
+
+    /* Sidebar Widgets */
+    .info-sidebar { position: sticky; top: 170px; }
+    .widget-card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 35px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+      margin-bottom: 30px;
+    }
+
+    .whatsapp-pulse {
+      background-color: var(--whatsapp-green);
+      color: white !important;
+      font-weight: 800;
+      border-radius: 50px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      animation: pulse-green 2s infinite;
+    }
+
+    @keyframes pulse-green {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    .guide-item { 
+      border-bottom: 1px solid #f5f5f5; 
+      padding: 15px 0; 
+      display: flex;
+      align-items: flex-start;
+    }
+    .guide-item i { color: var(--maroon); font-size: 18px; margin-right: 1
+      
+      5px; margin-top: 3px; }
+    .guide-item span { font-size: 14px; font-weight: 500; line-height: 1.6; color: #444; }
+
+    .feature-item { text-align: center; padding: 20px; }
+    .feature-icon { 
+      width: 70px; height: 70px; background: var(--maroon); color: white; 
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px; font-size: 28px;
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -47,14 +169,13 @@
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope d-flex align-items-center"><a
-              href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+              href="mailto:kshetradnyaahomeo@gmail.com">kshetradnyaahomeo@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+91 9657615353</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
-          <a href="#!" class="twitter"><i class="bi bi-twitter-x"></i></a>
-          <a href="#!" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#!" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#!" class="linkedin"><i class="bi bi-linkedin"></i></a>
+         
+          <a href="https://www.instagram.com/dranushreev?igsh=MTV2aG1rOXgwNnJ6aw%3D%3D&utm_source=qr!" class="instagram"><i class="bi bi-instagram"></i></a>
+         
         </div>
       </div>
     </div><!-- End Top Bar -->
@@ -70,41 +191,15 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="departments.html">Departments</a></li>
+            <li><a href="hero" class="active">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="Specialization">Departments</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="doctors.html">Doctors</a></li>
-            <li class="dropdown"><a href="#"><span>More Pages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="department-details.html">Department Details</a></li>
-              <li><a href="service-details.html">Service Details</a></li>
-              <li><a href="appointment.html">Appointment</a></li>
-              <li><a href="testimonials.html">Testimonials</a></li>
-              <li><a href="faq.html">Frequently Asked Questions</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="terms.html">Terms</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="404.html">404</a></li>
-            </ul>
-            </li>
-            <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Dropdown 1</a></li>
-                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                  <ul>
-                    <li><a href="#">Deep Dropdown 1</a></li>
-                    <li><a href="#">Deep Dropdown 2</a></li>
-                    <li><a href="#">Deep Dropdown 3</a></li>
-                    <li><a href="#">Deep Dropdown 4</a></li>
-                    <li><a href="#">Deep Dropdown 5</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Dropdown 2</a></li>
-                <li><a href="#">Dropdown 3</a></li>
-                <li><a href="#">Dropdown 4</a></li>
-              </ul>
-            </li>
+           <li>
+  <a href="appointment.html" >Appointment</a>
+</li>
+             <li><a href="booking.html">booking</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -116,190 +211,684 @@
 
   </header>
 
-  <main class="main">
+<main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section">
+  <div id="user-bar" class="bg-white shadow-sm py-2 border-bottom sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="small text-muted d-none d-md-block">
+        <i class="bi bi-person-heart text-danger"></i> <strong>Dr. Anushree Dilipkumar Vedpathak</strong> | Homeopathy Expert
+      </div>
+      <div id="logged-in-user" class="d-none">
+        <span class="small">Patient: <strong id="user-name" class="text-primary text-capitalize">User</strong></span>
+        <button onclick="logout()" class="btn btn-outline-danger btn-sm ms-2 rounded-pill" style="font-size: 11px;">Logout</button>
+      </div>
+      <div id="guest-msg" class="small text-muted">
+        <i class="bi bi-telephone"></i> +91 9657615353
+      </div>
+    </div>
+  </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <section id="auth-section" style="min-height: 100vh; display: flex; align-items: center; background: linear-gradient(135deg, #fff5f5 0%, #ffe4e1 100%); position: relative; z-index: 2000;">
+    <div class="container text-center">
+      <div class="mb-4">
+         <h2 class="fw-bold" style="color: #8b2c2c;">क्षेत्रज्ञ Homeopathy</h2>
+         <p class="text-muted">Please Login to Book your Appointment</p>
+      </div>
+      <div class="row justify-content-center text-start">
+        <div class="col-lg-4 col-md-6">
+          <div class="card p-4 shadow-lg border-0" style="border-radius: 25px; background: rgba(255, 255, 255, 0.95);">
+            <ul class="nav nav-pills mb-4 justify-content-center">
+              <li class="nav-item">
+                <button class="nav-link active rounded-pill px-4" data-bs-toggle="pill" data-bs-target="#login" style="background-color: #8b2c2c;">Patient Login</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link rounded-pill px-4" data-bs-toggle="pill" data-bs-target="#signup" style="color: #8b2c2c;">New Patient</button>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="login">
+                <form onsubmit="event.preventDefault(); loginUser();">
+                  <div class="mb-3">
+                    <input type="email" id="login-email" class="form-control py-2 shadow-sm border-0" placeholder="Email Address" required style="background: #f8f9fa;">
+                  </div>
+                  <div class="mb-3">
+                    <input type="password" id="login-pass" class="form-control py-2 shadow-sm border-0" placeholder="Password" required style="background: #f8f9fa;">
+                  </div>
+                  <button type="submit" class="btn w-100 py-2 rounded-pill shadow fw-bold" style="background: #8b2c2c; color: white;">Sign In</button>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="signup">
+                <form onsubmit="event.preventDefault(); signupUser();">
+                  <div class="mb-3">
+                    <input type="text" id="signup-name" class="form-control py-2 shadow-sm border-0" placeholder="Patient Full Name" required style="background: #f8f9fa;">
+                  </div>
+                  <div class="mb-3">
+                    <input type="email" id="signup-email" class="form-control py-2 shadow-sm border-0" placeholder="Email Address" required style="background: #f8f9fa;">
+                  </div>
+                  <div class="mb-3">
+                    <input type="password" id="signup-pass" class="form-control py-2 shadow-sm border-0" placeholder="Create Password" required style="background: #f8f9fa;">
+                  </div>
+                  <button type="submit" class="btn btn-success w-100 py-2 rounded-pill shadow fw-bold">Register Now</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="hero-content">
-              <div class="trust-badges mb-4" data-aos="fade-right" data-aos-delay="200">
-                <div class="badge-item">
+  <section id="hero" class="d-none py-5" style="background: white; overflow: hidden;">
+    <div class="container">
+      <div class="row align-items-center">
+        
+        <div class="col-lg-6">
+          <div class="mb-4">
+            <span class="badge rounded-pill px-3 py-2 shadow-sm" style="background:#fff0f0; color:#8b2c2c; border: 1px solid #ffcccc;">Homeopathy Clinic</span>
+          </div>
+
+          <h1 class="display-4 fw-bold mb-4" style="color: #4a1a1a;">
+            Healing the <br>
+            <span style="color: #8b2c2c; border-bottom: 5px solid #8b2c2c;">Root Cause,</span> <br>
+            Restoring Your Health
+          </h1>
+
+          <p class="text-muted fs-5 mb-5">
+            <strong>Dr. Anushree Dilipkumar Vedpathak</strong> specializes in personalized homeopathy treatments that are safe, gentle, and highly effective for complete wellness.
+          </p>
+
+          <div class="d-flex gap-3 mb-5">
+           <a href="appointment.html" class="btn btn-lg px-4 rounded-pill shadow" style="background: #8b2c2c; color: white; text-decoration: none; display: inline-block;">
+    Book Appointment
+</a>
+            <button class="btn btn-outline-danger btn-lg px-4 rounded-pill d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#videoModal">
+              <i class="bi bi-play-circle-fill me-2 fs-4"></i> Watch Video
+            </button>
+          </div>
+
+          <div class="row g-4 mt-2">
+            <div class="col-4"> 
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-leaf-fill" style="color:#8b2c2c;"></i>
+                <h6 class="fw-bold mb-0" style="color:#4a1a1a;">Natural</h6>
+              </div>
+              <p class="text-muted small">100% Safe Cure</p> 
+            </div>
+            <div class="col-4"> 
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-search-heart-fill" style="color:#8b2c2c;"></i>
+                <h6 class="fw-bold mb-0" style="color:#4a1a1a;">Holistic</h6>
+              </div>
+              <p class="text-muted small">Root Cause Focus</p> 
+            </div>
+            <div class="col-4"> 
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <i class="bi bi-shield-check-fill" style="color:#8b2c2c;"></i>
+                <h6 class="fw-bold mb-0" style="color:#4a1a1a;">Gentle</h6>
+              </div>
+              <p class="text-muted small">Zero Side Effects</p> 
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 position-relative mt-5 mt-lg-0 text-center">
+          <div id="status-card" class="position-absolute shadow-lg bg-white p-3 rounded-4 d-flex align-items-center text-start" 
+               style="top: 10%; right: -10px; z-index: 10; width: 250px; border-left: 5px solid #8b2c2c;">
+            <div id="status-icon" class="me-3 fs-3"></div>
+            <div>
+              <small id="status-label" class="text-muted d-block" style="font-size: 11px;">Clinic Status</small>
+              <h6 id="status-time" class="mb-0 fw-bold" style="font-size: 13px;">Checking...</h6>
+              <small class="text-muted" style="font-size: 11px;">Dr. Anushree V.</small>
+            </div>
+          </div>
+
+          <div class="ps-lg-5">
+            <img src="assets/img/person/doctor image.jpeg" class="img-fluid rounded-5 shadow-lg" style="max-height: 550px;" alt="Dr. Anushree">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-header border-0 p-0 justify-content-end">
+          <button type="button" class="btn-close btn-close-white mb-2" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-0 text-center">
+          <div class="ratio ratio-16x9 shadow-lg rounded-4 overflow-hidden">
+            <iframe src="assets/video .mp4" title="Clinic Video" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // LIVE CLINIC STATUS LOGIC (Mon-Sat: 10:30-2, 5:30-9 | Sun: 5:30-9)
+
+  function updateClinicStatus() {
+    const now = new Date();
+    const day = now.getDay(); 
+    const hour = now.getHours();
+    const min = now.getMinutes();
+    const currentTime = hour + (min / 60);
+
+    const statusIcon = document.getElementById("status-icon");
+    const statusTime = document.getElementById("status-time");
+    const statusLabel = document.getElementById("status-label");
+
+    let isOpen = false;
+    let message = "";
+
+    // Mon - Sat
+    if (day >= 1 && day <= 6) {
+      if ((currentTime >= 10.5 && currentTime < 14) || (currentTime >= 17.5 && currentTime < 21)) {
+        isOpen = true;
+        message = "Available Now";
+      } else if (currentTime < 10.5) {
+        message = "Opens Today at 10:30 AM";
+      } else if (currentTime >= 14 && currentTime < 17.5) {
+        message = "Next Slot: 5:30 PM";
+      } else {
+        message = "Closed for Today";
+      }
+    } 
+    // Sunday
+    else {
+      if (currentTime >= 17.5 && currentTime < 21) {
+        isOpen = true;
+        message = "Available Now";
+      } else if (currentTime < 17.5) {
+        message = "Sunday Evening: 5:30 PM";
+      } else {
+        message = "Opens Monday 10:30 AM";
+      }
+    }
+
+    if (isOpen) {
+      statusIcon.innerHTML = "🟢";
+      statusLabel.innerText = "Clinic is Open";
+      statusLabel.className = "text-success d-block small fw-bold";
+      statusTime.innerText = message;
+    } else {
+      statusIcon.innerHTML = "🔴";
+      statusLabel.innerText = "Currently Closed";
+      statusLabel.className = "text-danger d-block small fw-bold";
+      statusTime.innerText = message;
+    }
+  }
+
+  function checkLogin() {
+    let isLoggedIn = localStorage.getItem("login");
+    let patientName = localStorage.getItem("user");
+
+    if (isLoggedIn === "true") {
+      document.getElementById("auth-section").classList.add("d-none"); 
+      document.getElementById("hero").classList.remove("d-none");       
+      document.getElementById("logged-in-user").classList.remove("d-none");   
+      document.getElementById("guest-msg").classList.add("d-none");   
+      document.getElementById("user-name").innerText = patientName;
+      document.body.style.overflow = "auto";
+      updateClinicStatus();
+    } else {
+      document.getElementById("auth-section").classList.remove("d-none");
+      document.getElementById("hero").classList.add("d-none");
+      document.getElementById("logged-in-user").classList.add("d-none");
+      document.getElementById("guest-msg").classList.remove("d-none");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function signupUser() {
+    let name = document.getElementById("signup-name").value;
+    let email = document.getElementById("signup-email").value;
+    let pass = document.getElementById("signup-pass").value;
+    localStorage.setItem("user", name);
+    localStorage.setItem("email", email);
+    localStorage.setItem("pass", pass);
+    alert("Registration Successful! Please login.");
+    location.reload(); 
+  }
+
+  function loginUser() {
+    let emailInput = document.getElementById("login-email").value;
+    let passInput = document.getElementById("login-pass").value;
+    if (emailInput === localStorage.getItem("email") && passInput === localStorage.getItem("pass")) {
+      localStorage.setItem("login", "true");
+      checkLogin();
+    } else {
+      alert("Invalid Email or Password.");
+    }
+  }
+
+  function logout() {
+    localStorage.removeItem("login");
+    location.reload();
+  }
+
+  window.onload = checkLogin;
+  setInterval(updateClinicStatus, 60000); // Update every minute
+</script>
+   <!-- about Section --> 
+<section id="about" class="section" style="background: #ffffff;">
+  
+  <div class="container mb-4" data-aos="fade-up">
+    <div class="d-flex align-items-center gap-2 mb-1">
+      <span style="width: 40px; height: 2px; background: #8b2c2c; display: inline-block;"></span>
+      <span class="text-uppercase fw-bold" style="color: #8b2c2c; letter-spacing: 2px; font-size: 13px;">About Us</span>
+    </div>
+    <h2 class="fw-bold" style="color: #4a1a1a;">Learn More About Our Clinic</h2>
+  </div>
+
+  <div class="container" data-aos="fade-up">
+    <div class="row g-5 align-items-start">
+      
+      <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+        <div >
+          <div class="position-relative">
+            <img src="assets/img/about.jpeg" class="img-fluid rounded-5 shadow-lg" alt="Dr. Anushree Vedpathak" style="border: 12px solid #fff; width: 100%; height: 550px; object-fit: cover;" overflow:"hidden">
+            
+            <div class="position-absolute bg-white p-4 rounded-4 shadow-lg text-center" style="bottom: 10px; left: 30px; border-top: 5px solid #8b2c2c; min-width: 200px;" style="margin-bottom: 40px;">
+               <div class="fs-2 mb-1" style="color: #8b2c2c;"><i class="bi bi-patch-check-fill"></i></div>
+               <h6 class="fw-bold m-0" style="color: #4a1a1a;">Expert Consultant</h6>
+               <p class="small text-muted m-0">In Classical Homeopathy</p>
+            </div>
+          </div>
+          
+          <div class="row g-3 mt-5">
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-4 text-center border-bottom border-danger border-3">
+                <h3 class="fw-bold mb-0" style="color: #8b2c2c;">100%</h3>
+                <small class="text-muted fw-bold">Natural Cures</small>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-3 bg-light rounded-4 text-center border-bottom border-danger border-3">
+                <h3 class="fw-bold mb-0" style="color: #8b2c2c;">Safe</h3>
+                <small class="text-muted fw-bold">For All Ages</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+        <div class="ps-lg-4">
+          <h2 class="display-5 fw-bold mb-4" style="color: #4a1a1a; line-height: 1.1;">
+            Healing the Root Cause with <br>
+            <span style="color: #8b2c2c;">Dr. Anushree Vedpathak</span>
+          </h2>
+
+          <div class="description-text mb-5">
+            <p class="lead fw-bold" style="color: #555; line-height: 1.6;">
+              At <strong>Kshetrajna Homeopathy</strong>, we define healing as a journey toward complete physical, mental, and social well-being.
+            </p>
+            <p style="color: #666; font-size: 17px; line-height: 1.8; text-align: justify;">
+              <strong>Dr. Anushree Dilipkumar Vedpathak</strong> brings a wealth of expertise in Classical Homeopathy, focusing on a patient-centric model that respects the uniqueness of every individual. Our clinic is founded on the belief that symptoms are merely the body's language, signaling a deeper internal imbalance. 
+            </p>
+            <p style="color: #666; font-size: 17px; line-height: 1.8; text-align: justify;">
+              Unlike conventional medicine which often suppresses symptoms, our constitutional approach identifies the root cause—be it emotional stress, genetic predisposition, or lifestyle factors. We utilize high-quality, pure homeopathic potentizations to stimulate the body's innate power to heal itself naturally and permanently.
+            </p>
+          </div>
+
+          <h5 class="fw-bold mb-4" style="color: #4a1a1a;">Why Choose Our Care?</h5>
+          <div class="row g-4 mb-5">
+            <div class="col-md-6">
+              <div class="d-flex gap-3">
+                <div class="icon-circle shadow-sm d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background: #8b2c2c; color: #fff; border-radius: 15px; flex-shrink: 0;">
+                  <i class="bi bi-heart-pulse"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Root-Cause Focus</h6>
+                  <p class="small text-muted mb-0">We treat the source of the disease, not just the symptoms.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="d-flex gap-3">
+                <div class="icon-circle shadow-sm d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background: #8b2c2c; color: #fff; border-radius: 15px; flex-shrink: 0;">
                   <i class="bi bi-shield-check"></i>
-                  <span>Accredited</span>
                 </div>
-                <div class="badge-item">
-                  <i class="bi bi-clock"></i>
-                  <span>24/7 Emergency</span>
-                </div>
-                <div class="badge-item">
-                  <i class="bi bi-star-fill"></i>
-                  <span>4.9/5 Rating</span>
-                </div>
-              </div>
-
-              <h1 data-aos="fade-right" data-aos-delay="300">
-                Excellence in <span class="highlight">Healthcare</span> With Compassionate Care
-              </h1>
-
-              <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
-              </p>
-
-              <div class="hero-stats mb-4" data-aos="fade-right" data-aos-delay="500">
-                <div class="stat-item">
-                  <h3><span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="2"
-                      class="purecounter"></span>+</h3>
-                  <p>Years Experience</p>
-                </div>
-                <div class="stat-item">
-                  <h3><span data-purecounter-start="0" data-purecounter-end="5000" data-purecounter-duration="2"
-                      class="purecounter"></span>+</h3>
-                  <p>Patients Treated</p>
-                </div>
-                <div class="stat-item">
-                  <h3><span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="2"
-                      class="purecounter"></span>+</h3>
-                  <p>Medical Experts</p>
-                </div>
-              </div>
-
-              <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
-                <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
-                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-outline glightbox">
-                  <i class="bi bi-play-circle me-2"></i>
-                  Watch Our Story
-                </a>
-              </div>
-
-              <div class="emergency-contact" data-aos="fade-right" data-aos-delay="700">
-                <div class="emergency-icon">
-                  <i class="bi bi-telephone-fill"></i>
-                </div>
-                <div class="emergency-info">
-                  <small>Emergency Hotline</small>
-                  <strong>+1 (555) 911-2468</strong>
+                <div>
+                  <h6 class="fw-bold mb-1">Zero Side Effects</h6>
+                  <p class="small text-muted mb-0">Safe, non-toxic, and natural medicines for long-term health.</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="col-lg-6">
-            <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
-              <div class="main-image">
-                <img src="assets/img/health/staff-10.webp" alt="Modern Healthcare Facility" class="img-fluid">
-                <div class="floating-card appointment-card">
-                  <div class="card-icon">
-                    <i class="bi bi-calendar-check"></i>
+          <div class="p-4 rounded-4 shadow-sm" style="background: #fffafa; border-left: 8px solid #8b2c2c;">
+             <p class="mb-0 italic" style="font-style: italic; color: #4a1a1a; font-size: 18px;">
+               "My mission is to restore health gently and permanently, ensuring that every patient leaves with a smile and a healthier future."
+             </p>
+             <footer class="blockquote-footer mt-2 fw-bold" style="color: #8b2c2c;">Dr. Anushree Vedpathak</footer>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section> <!-- end about Section -->
+<section id="appointment-form-section" class="section py-5" style="background: linear-gradient(135deg, #fff5f5 0%, #ffffff 100%);">
+  <div class="container">
+    
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 class="fw-bold" style="color: var(--dark-blue); font-size: 42px;">Book Your Appointment</h2>
+      <p class="text-maroon fw-bold mb-1" style="color: #8b2c2c;">“A Sweet Journey to True Healing”</p>
+      <h5 class="fw-bold mt-2 text-muted">Dr. Anushree D. Vedpathak <small>(BHMS, MCAH Mumbai)</small></h5>
+    </div>
+
+    <div class="row mb-5" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-3 col-6 feature-item text-center">
+        <div class="feature-icon mx-auto mb-3" style="width: 70px; height: 70px; background: #8b2c2c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+          <i class="bi bi-shield-check"></i>
+        </div>
+        <h6 class="fw-bold">100% Safe</h6>
+      </div>
+      <div class="col-md-3 col-6 feature-item text-center">
+        <div class="feature-icon mx-auto mb-3" style="width: 70px; height: 70px; background: #8b2c2c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+          <i class="bi bi-heart-pulse"></i>
+        </div>
+        <h6 class="fw-bold">Gentle Healing</h6>
+      </div>
+      <div class="col-md-3 col-6 feature-item text-center">
+        <div class="feature-icon mx-auto mb-3" style="width: 70px; height: 70px; background: #8b2c2c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+          <i class="bi bi-graph-up-arrow"></i>
+        </div>
+        <h6 class="fw-bold">Root Cause Focus</h6>
+      </div>
+      <div class="col-md-3 col-6 feature-item text-center">
+        <div class="feature-icon mx-auto mb-3" style="width: 70px; height: 70px; background: #8b2c2c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px;">
+          <i class="bi bi-person-video3"></i>
+        </div>
+        <h6 class="fw-bold">Hybrid Consultation</h6>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      
+      <div class="col-lg-8" data-aos="fade-right">
+        <div class="booking-card p-4 p-md-5 shadow-lg" style="background: #ffffff; border-radius: 45px; border-top: 12px solid #8b2c2c;">
+          <h4 class="fw-bold mb-4" style="color: #8b2c2c;">Patient Registration Form</h4>
+          <form action="#" method="post">
+            <div class="row g-4 text-start">
+              
+              <div class="col-md-12">
+                <label class="form-label fw-bold">Patient Full Name</label>
+                <input type="text" class="form-control rounded-4" placeholder="Enter your full name" required style="padding: 15px 25px; background-color: #fdfafa;">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-bold">WhatsApp Number</label>
+                <input type="tel" class="form-control rounded-4" placeholder="Enter your 10-digit number" required style="padding: 15px 25px; background-color: #fdfafa;">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Email Address</label>
+                <input type="email" class="form-control rounded-4" placeholder="Enter your email address" style="padding: 15px 25px; background-color: #fdfafa;">
+              </div>
+
+              <div class="col-md-12">
+                <label class="form-label fw-bold">Condition / Treatment Category</label>
+                <select class="form-select rounded-4" required style="padding: 15px 25px; background-color: #fdfafa;">
+                  <option value="">-- Select Category --</option>
+                  <option>Skin Disorders (Acne, Pimples, Melasma, Warts)</option>
+                  <option>Hair Concerns (Alopecia, Hairfall, Scalp Issues)</option>
+                  <option>Hormonal Imbalance (PCOD, Thyroid)</option>
+                  <option>Child Health (Autism, ADHD, Low Immunity)</option>
+                  <option>Respiratory Health (Asthma, Sinusitis, Allergies)</option>
+                  <option>Digestive Issues (IBS, Acidity, Constipation)</option>
+                  <option>Mental Health (Anxiety, Depression, Sleep Loss)</option>
+                  <option>Joints & Muscles (Sciatica, Back Pain, Arthritis)</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Preferred Date</label>
+                <input type="date" class="form-control rounded-4" required style="padding: 15px 25px; background-color: #fdfafa;">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-bold">Preferred Time Slot</label>
+                <select class="form-select rounded-4" required style="padding: 15px 25px; background-color: #fdfafa;">
+                  <option value="">-- Choose Session --</option>
+                  <optgroup label="Morning (10:30 AM - 2:00 PM)">
+                    <option>10:30 AM</option><option>11:30 AM</option><option>12:30 PM</option><option>01:30 PM</option>
+                  </optgroup>
+                  <optgroup label="Evening (5:30 PM - 9:00 PM)">
+                    <option>05:30 PM</option><option>06:30 PM</option><option>07:30 PM</option><option>08:30 PM</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="col-md-12">
+                <label class="form-label fw-bold">Mode of Visit</label>
+                <div class="d-flex gap-4 p-3 bg-light rounded-4">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="mode" id="clinic" checked>
+                    <label class="form-check-label fw-bold" for="clinic">In-Clinic Visit (Wakad)</label>
                   </div>
-                  <div class="card-content">
-                    <h6>Next Available</h6>
-                    <p>Today 2:30 PM</p>
-                    <small>Dr. Sarah Johnson</small>
-                  </div>
-                </div>
-                <div class="floating-card rating-card">
-                  <div class="card-content">
-                    <div class="rating-stars">
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                      <i class="bi bi-star-fill"></i>
-                    </div>
-                    <h6>4.9/5</h6>
-                    <small>1,234 Reviews</small>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="mode" id="online">
+                    <label class="form-check-label fw-bold" for="online">Online Video Consultation</label>
                   </div>
                 </div>
               </div>
-              <div class="background-elements">
-                <div class="element element-1"></div>
-                <div class="element element-2"></div>
-                <div class="element element-3"></div>
+
+              <div class="col-12">
+                <label class="form-label fw-bold">Brief Symptoms</label>
+                <textarea class="form-control rounded-4" rows="4" placeholder="Briefly describe your symptoms..." style="padding: 15px 25px; background-color: #fdfafa;"></textarea>
+              </div>
+
+              <div class="col-12 text-center">
+                <button type="submit" class="btn w-100 py-3 rounded-pill shadow fw-bold" style="background: linear-gradient(135deg, #8b2c2c 0%, #cc3333 50%, #8b2c2c 100%); color: white; text-transform: uppercase; letter-spacing: 2px; border: none;">Book My Appointment Now</button>
+                <p class="mt-4 small text-muted"><i class="bi bi-shield-fill-check text-success"></i> Your medical privacy is our top priority.</p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-lg-4" data-aos="fade-left">
+        <div class="info-sidebar" style="position: sticky; top: 100px;">
+          
+          <div class="widget-card p-4 rounded-4 shadow-sm bg-white mb-4 border-start border-5 border-success">
+            <h5 class="fw-bold text-success mb-3"><i class="bi bi-chat-dots-fill"></i> Quick Help</h5>
+            <p class="small text-muted mb-4">Have questions? Reach out directly via WhatsApp for immediate guidance.</p>
+            <a href="https://wa.me/919657615353" target="_blank" class="whatsapp-btn d-flex align-items-center justify-content-center text-decoration-none py-3 rounded-pill text-white fw-bold" style="background-color: #25d366;">
+              <i class="bi bi-whatsapp me-2 fs-5"></i> Chat via WhatsApp
+            </a>
+          </div>
+
+          <div class="widget-card p-4 rounded-4 shadow-sm bg-white border-top border-4 border-maroon" style="border-top-color: #8b2c2c !important;">
+            <h5 class="fw-bold mb-4" style="color: #8b2c2c;"><i class="bi bi-info-circle-fill me-2"></i>Patient Guidelines</h5>
+            
+            <div class="guide-item d-flex align-items-start mb-3 border-bottom pb-2">
+              <i class="bi bi-alarm-fill me-3 mt-1" style="color: #8b2c2c;"></i>
+              <span class="small">Please arrive at least 10 minutes prior to your scheduled time.</span>
+            </div>
+
+            <div class="guide-item d-flex align-items-start mb-3 border-bottom pb-2">
+              <i class="bi bi-hourglass-bottom me-3 mt-1" style="color: #8b2c2c;"></i>
+              <span class="small">Initial consultation usually takes 30-45 minutes for in-depth study.</span>
+            </div>
+
+            <div class="guide-item d-flex align-items-start mb-3 border-bottom pb-2">
+              <i class="bi bi-file-earmark-medical-fill me-3 mt-1" style="color: #8b2c2c;"></i>
+              <span class="small">Keep your previous reports ready for a holistic review.</span>
+            </div>
+            
+            <div class="mt-4 p-3 rounded-4 bg-light text-center" style="border: 2px dashed #ddd;">
+              <p class="small fw-bold mb-0 text-muted">📍 Location: Wakad, Pune</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="premium-order-main" style="background: linear-gradient(135deg, #fdfdfd 0%, #fff 100%); font-family: 'Plus Jakarta Sans', sans-serif; color: #1d1d1f; padding: 80px 0;">
+  
+  <div class="container pb-5">
+
+    <div id="step-1-details" class="order-step active">
+      <div class="product-header text-center mb-5" data-aos="fade-up">
+        <div class="brand-top mb-2" style="font-weight: 800; color: #8b2c2c; letter-spacing: -1px; text-transform: uppercase; font-size: 0.9rem;">क्षेत्रज्ञ HOMEOPATHY</div>
+        <div class="badge-premium" style="background: #fff1f1; color: #8b2c2c; border: 1px solid #ffebeb; padding: 8px 20px; border-radius: 50px; font-weight: 700; font-size: 0.9rem; margin-bottom: 15px; display: inline-block;">DR. ANUSHREE'S ADVANCED FORMULATION</div>
+        <h1 class="product-title" style="font-size: 3.5rem; font-weight: 800; color: #1d1d1f; line-height: 1.1;">Little Ones Care Kit</h1>
+        <p class="product-subtitle text-muted" style="font-size: 1.3rem; max-width: 750px; margin: 0 auto;">A Complete Homeopathic First-Aid Box for Children (Ages 0-12).</p>
+      </div>
+
+      <div class="row g-5 align-items-stretch">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="image-card text-center p-3" style="background: white; border-radius: 40px; box-shadow: 0 30px 60px rgba(139, 44, 44, 0.1); border: 1px solid #f1f1f1;">
+            <img src="assets/img/order.jpg" style="width: 100%; border-radius: 30px; object-fit: cover;">
+            <div class="price-box mt-4 p-3 bg-light rounded-4 d-inline-flex align-items-center gap-3 shadow-sm">
+              <span style="font-size: 3rem; font-weight: 800; color: #8b2c2c;">₹799</span> 
+              <span class="text-muted text-decoration-line-through" style="font-size: 1.4rem;">₹1,200</span>
+              <span style="background: #038d63; color: white; padding: 5px 12px; border-radius: 10px; font-weight: 700;">33% OFF</span>
+            </div>
+            <p class="mt-4 text-muted small fw-bold">100% SAFE & NATURAL | PEDIATRICIAN APPROVED</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="info-card h-100 p-4 p-md-5 bg-white rounded-5 shadow-sm border">
+            <h3 style="font-weight: 800; margin-bottom: 30px;">What's inside this Kit?</h3>
+            <div class="feature-list">
+              <div class="d-flex gap-3 mb-4">
+                <div style="min-width: 55px; height: 55px; background: #fdf2f2; color: #8b2c2c; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="bi bi-thermometer-sun"></i></div>
+                <div><h6 class="fw-bold mb-1">Fever & Seasonal Cold</h6><p class="small text-muted mb-0">Highly effective for sudden fever and runny nose. Boosts natural immunity.</p></div>
+              </div>
+              <div class="d-flex gap-3 mb-4">
+                <div style="min-width: 55px; height: 55px; background: #fdf2f2; color: #8b2c2c; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="bi bi-wind"></i></div>
+                <div><h6 class="fw-bold mb-1">Colic & Gastric Relief</h6><p class="small text-muted mb-0">Provides instant relief from stomach gas, bloating and milk-related issues.</p></div>
+              </div>
+              <div class="d-flex gap-3 mb-4">
+                <div style="min-width: 55px; height: 55px; background: #fdf2f2; color: #8b2c2c; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="bi bi-bandaid"></i></div>
+                <div><h6 class="fw-bold mb-1">Injuries, Bumps & Bruises</h6><p class="small text-muted mb-0">Reduces swelling and pain from minor falls. Accelerates healing naturally.</p></div>
+              </div>
+              <div class="d-flex gap-3 mb-4">
+                <div style="min-width: 55px; height: 55px; background: #fdf2f2; color: #8b2c2c; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="bi bi-lungs"></i></div>
+                <div><h6 class="fw-bold mb-1">Cough & Throat Care</h6><p class="small text-muted mb-0">Natural remedy for dry and chesty cough. Soothes throat irritation.</p></div>
+              </div>
+              <div class="d-flex gap-3 mb-4">
+                <div style="min-width: 55px; height: 55px; background: #fdf2f2; color: #8b2c2c; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="bi bi-car-front"></i></div>
+                <div><h6 class="fw-bold mb-1">Travel Sickness</h6><p class="small text-muted mb-0">Prevents nausea and vomiting during journeys for stress-free travel.</p></div>
+              </div>
+              <div class="d-flex gap-3 mb-0">
+                <div style="min-width: 55px; height: 55px; background: #fdf2f2; color: #8b2c2c; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;"><i class="bi bi-emoji-smile"></i></div>
+                <div><h6 class="fw-bold mb-1">Teething Troubles</h6><p class="small text-muted mb-0">Reduces irritability and gum swelling during the teething phase.</p></div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
 
-    </section><!-- /Hero Section -->
+      <div class="text-center mt-5">
+        <button class="btn btn-lg px-5 py-3 rounded-pill shadow-lg fw-bold text-white" onclick="changeStep('step-2-address')" style="background: #8b2c2c; font-size: 1.5rem; text-transform: uppercase; width: 100%; max-width: 600px;">PROCEED TO BUY NOW <i class="bi bi-arrow-right ms-2"></i></button>
+        <p class="mt-3 text-muted" style="cursor:pointer; text-decoration: underline;" onclick="changeStep('step-track')">Track My Existing Order</p>
+      </div>
+    </div>
 
-    <!-- Home About Section -->
-    <section id="home-about" class="home-about section">
+    <div id="step-2-address" class="order-step" style="display: none;">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 bg-white p-5 rounded-5 shadow-lg border-top border-5" style="border-color: #8b2c2c;">
+          <h2 class="fw-bold mb-5 text-center">Delivery Details</h2>
+          
+          <div class="mb-4">
+            <label class="form-label fw-bold">1. Shipping Address</label>
+            <input type="text" id="c_name" class="form-control mb-3 p-3 bg-light border-0" placeholder="Full Name*">
+            <input type="tel" id="c_phone" class="form-control mb-3 p-3 bg-light border-0" placeholder="WhatsApp Number*">
+            <textarea id="c_address" class="form-control p-3 bg-light border-0" rows="3" placeholder="Full Address with Pincode*"></textarea>
+          </div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="mb-5">
+            <label class="form-label fw-bold">2. Payment Method</label>
+            <div class="border rounded-4 p-3 mb-3 d-flex align-items-center" style="cursor:pointer" onclick="document.getElementById('p1').checked=true; document.getElementById('qr-box').style.display='block'">
+              <input type="radio" name="payment" id="p1" checked> <strong class="ms-3">Scan QR & Pay (Online)</strong>
+            </div>
+            
+            <div id="qr-box" class="text-center p-4 bg-light rounded-4 border mb-3">
+              <p class="fw-bold mb-2">Scan QR to pay ₹799</p>
+              <img src="assets/img/qr.jpg" style="width: 100%; max-width: 450px; border: 10px solid white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+              <p class="fw-bold text-primary mt-3">UPI ID: anushree.vedpathak27@okaxis</p>
+            </div>
 
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
-            <div class="about-content">
-              <h2 class="section-heading">Compassionate Care, Advanced Medicine</h2>
-              <p class="lead-text">For over two decades, we've been dedicated to providing exceptional healthcare that
-                combines cutting-edge medical technology with the personal touch our patients deserve.</p>
-
-              <p>Our multidisciplinary team of specialists works collaboratively to ensure every patient receives
-                comprehensive care tailored to their unique needs. From preventive services to complex procedures, we
-                maintain the highest standards of medical excellence while fostering an environment of trust and
-                healing.</p>
-
-              <div class="stats-grid">
-                <div class="stat-item">
-                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="15000"
-                    data-purecounter-duration="1"></div>
-                  <div class="stat-label">Patients Served</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="25"
-                    data-purecounter-duration="1"></div>
-                  <div class="stat-label">Years of Excellence</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-number purecounter" data-purecounter-start="0" data-purecounter-end="50"
-                    data-purecounter-duration="1"></div>
-                  <div class="stat-label">Medical Specialists</div>
-                </div>
-              </div>
-
-              <div class="cta-section">
-                <a href="about.html" class="btn-primary">Learn More About Us</a>
-              </div>
+            <div class="border rounded-4 p-3 d-flex align-items-center" style="cursor:pointer" onclick="document.getElementById('p2').checked=true; document.getElementById('qr-box').style.display='none'">
+              <input type="radio" name="payment" id="p2"> <strong class="ms-3">Cash on Delivery (COD)</strong>
             </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-            <div class="about-visual">
-              <div class="main-image">
-                <img src="assets/img/health/facilities-9.webp" alt="Modern medical facility" class="img-fluid">
-              </div>
-              <div class="floating-card">
-                <div class="card-content">
-                  <div class="icon">
-                    <i class="bi bi-heart-pulse"></i>
-                  </div>
-                  <div class="card-text">
-                    <h4>24/7 Emergency Care</h4>
-                    <p>Always here when you need us most</p>
-                  </div>
-                </div>
-              </div>
-              <div class="experience-badge">
-                <div class="badge-content">
-                  <span class="years">25+</span>
-                  <span class="text">Years of Trusted Care</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <button class="btn btn-lg w-100 py-3 rounded-pill fw-bold text-white shadow" onclick="placeFinalOrder()" style="background: #8b2c2c;">PLACE ORDER NOW</button>
+          <p class="text-center mt-3 text-muted" style="cursor:pointer" onclick="changeStep('step-1-details')">← Go back</p>
         </div>
-
       </div>
+    </div>
 
-    </section><!-- /Home About Section -->
+    <div id="step-track" class="order-step" style="display: none;">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center bg-white p-5 rounded-5 shadow">
+          <h2 class="fw-bold mb-4">Track Your Order</h2>
+          <div class="input-group mb-4">
+            <input type="text" id="track_input" class="form-control p-3" placeholder="Enter Order ID (e.g. KSJ1234)">
+            <button class="btn btn-danger px-4" onclick="trackAction()">Track</button>
+          </div>
+          <div id="track-info" style="display:none;" class="text-start mt-5">
+            <h6 class="fw-bold">Status: <span class="text-success">Packed & Ready for Dispatch</span></h6>
+            <div style="height: 10px; background: #eee; border-radius: 10px; margin: 15px 0;">
+              <div style="width: 40%; height: 100%; background: #038d63; border-radius: 10px;"></div>
+            </div>
+            <p class="small text-muted text-center">Your order will reach in 3-5 working days.</p>
+          </div>
+          <p class="mt-4 text-muted" style="cursor:pointer" onclick="changeStep('step-1-details')">← Back to shop</p>
+        </div>
+      </div>
+    </div>
 
+    <div id="order-success" class="order-step" style="display: none; position: fixed; inset: 0; background: #038d63; color: white; z-index: 99999; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+      <i class="bi bi-check-circle-fill" style="font-size: 150px;"></i>
+      <h1 class="display-2 fw-bold mt-4">Order Placed!</h1>
+      <p class="fs-3">Your Tracking ID: <strong id="order_id_val">#KSJ0000</strong></p>
+      <p class="mt-2 opacity-75">We have received your order. We will call you soon for verification.</p>
+      <button class="btn btn-light rounded-pill px-5 py-3 mt-5 fw-bold" onclick="location.reload()">Back to Home</button>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function changeStep(stepId) {
+    document.querySelectorAll('.order-step').forEach(s => s.style.display = 'none');
+    const target = document.getElementById(stepId);
+    if(target) {
+      target.style.display = stepId === 'order-success' ? 'flex' : 'block';
+    }
+    window.scrollTo({top: document.getElementById('premium-order-main').offsetTop - 100, behavior: 'smooth'});
+  }
+
+  function placeFinalOrder() {
+    const name = document.getElementById('c_name').value;
+    if(!name) { alert("Please fill your full name and address"); return; }
+    
+    const randomId = "KSJ" + Math.floor(Math.random() * 8999 + 1000);
+    document.getElementById('order_id_val').innerText = "#" + randomId;
+    changeStep('order-success');
+  }
+
+  function trackAction() {
+    const val = document.getElementById('track_input').value;
+    if(val.length < 4) { alert("Please enter a valid Order ID"); return; }
+    document.getElementById('track-info').style.display = 'block';
+  }
+</script>
     <!-- Featured Departments Section -->
     <section id="featured-departments" class="featured-departments section">
 
